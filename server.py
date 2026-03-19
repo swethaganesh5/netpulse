@@ -265,3 +265,6 @@ def dashboard():
 if __name__ == '__main__':
     print(f"\n  NetPulse v{VERSION} — http://0.0.0.0:5000\n  ML: {'✓' if ML_AVAILABLE else '✗ pip install scikit-learn numpy'}\n")
     app.run(host="0.0.0.0", port=5000, debug=True)
+    import os
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port, debug=False)
